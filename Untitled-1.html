@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>javascript</title>
+  </head>
+  <style>
+   input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+  
+  </style>
+
+  
+  <body>
+    <h1>Enter Your Text</h1>
+    <p id="output">
+
+    </p>
+    <label>
+       Your Text            
+    </label>
+    <input id="text1" type="number" onkeyup="fn1()" placeholder="type to make it bold">
+</input>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+
+    
+  </body>
+  <script>
+
+  var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+  var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+
+  document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+
+
+
+
+
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+    
+                 
+ function fn1(){
+
+
+              var str= document.getElementById("text1").value;
+               
+               
+
+               if(Number(str)){
+                var b=parseInt(str,10);
+                var b=str.fontcolor("green");
+               var b =Math.sqrt(str);
+               var str= document.getElementById("output").innerHTML=b;
+              console.log("here is the square of a number:" + str);
+              }
+      else{
+        
+                document.getElementById("text1").disabled=true;
+}
+
+
+                
+ }
+
+  </script>
+    </body>
+
+</html>

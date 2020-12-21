@@ -1,0 +1,56 @@
+h1{
+               font-weight:bold;
+               font-family: 'Franklin Gothic Medium';
+               text-align: center;
+}
+.left1{
+               background-color: yellow;
+               padding-right: 0px;
+               margin: 0px;
+}
+.left{
+               font-family: 'Franklin Gothic Medium';
+               text-align: center;
+               font-size: 30px;
+               color:black;
+               
+}
+.ryt1{
+               background-color:black;
+               padding: 0px;
+}
+p{
+               font-family: 'Franklin Gothic Medium';
+               text-align: center;
+               font-size: 30px;
+               color:white;
+}
+.subsection{
+               background-color: tomato;
+               padding: 0px;
+}
+.subsection2{
+               background-color: orchid;
+               padding: 0px;
+}
+.subsection3{
+               background-color: red;
+               padding: 0px;
+}
+.subsection4{
+               background-color: teal;
+               padding: 0px;
+}
+.subsection5{
+               background-color: purple;
+               padding: 0px;
+}
+.subsection6{
+               background-color: skyblue;
+               padding: 0px;
+}
+.subsection7{
+               background-color: turquoise;
+               padding: 0px;
+}
+
